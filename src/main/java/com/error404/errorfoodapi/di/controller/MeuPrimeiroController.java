@@ -1,4 +1,4 @@
-package com.error404.errorfoodapi;
+package com.error404.errorfoodapi.di.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,7 +27,7 @@ public class MeuPrimeiroController {
 		Cliente joao = new Cliente("joão", "email@gmail.com", "999999");
 	 
 		ativacaoClienteService.ativar(joao);
-		return "Hello1!";
+		return "Hello1234!";
 	}
 	
 }

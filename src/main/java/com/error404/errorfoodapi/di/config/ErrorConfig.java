@@ -1,4 +1,4 @@
-package com.error404.errorfoodapi;
+package com.error404.errorfoodapi.di.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

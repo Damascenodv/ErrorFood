@@ -1,4 +1,4 @@
-package com.error404.errorfoodapi;
+package com.error404.errorfoodapi.di.config;
 
 
 
