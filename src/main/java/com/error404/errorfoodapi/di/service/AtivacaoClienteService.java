@@ -6,7 +6,7 @@ import com.error404.errorfoodapi.di.modelo.Cliente;
 import com.error404.errorfoodapi.di.notificacao.Notificador;
 
 
-@Component
+
 public class AtivacaoClienteService {
 
 	private Notificador notificador;
