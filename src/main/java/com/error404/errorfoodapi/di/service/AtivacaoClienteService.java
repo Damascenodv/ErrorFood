@@ -1,9 +1,7 @@
 package com.error404.errorfoodapi.di.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationEventPublisher;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import com.error404.errorfoodapi.di.modelo.Cliente;
@@ -16,12 +14,14 @@ import com.error404.errorfoodapi.di.service.events.ClienteAtivadoEvent;
 @Component
 public class AtivacaoClienteService {
 
-	@Autowired
+    @Autowired
 	private  ApplicationEventPublisher eventPublisher;
 
-	public void ativar(Cliente cliente) {
+	public void ativar(Cliente cliente,Notificador notificador) {
 		cliente.ativar();
-		eventPublisher.publishEvent(new ClienteAtivadoEvent(cliente));
+		eventPublisher.publishEvent(new ClienteAtivadoEvent(cliente,notificador));
+
+		
 
 	}
 	
