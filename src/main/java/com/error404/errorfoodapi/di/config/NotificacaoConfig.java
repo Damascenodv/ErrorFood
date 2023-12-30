@@ -1,4 +1,4 @@
-package com.error404.errorfoodapi.di.config;
+/*package com.error404.errorfoodapi.di.config;
 
 
 import org.springframework.context.annotation.Bean;
@@ -17,4 +17,4 @@ public class NotificacaoConfig {
         return notificador;
     }
 
-}
+}*/

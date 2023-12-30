@@ -1,4 +1,4 @@
-package com.error404.errorfoodapi.di.config;
+/*package com.error404.errorfoodapi.di.config;
 
 
 
@@ -17,3 +17,4 @@ public class ServiceConfig {
         return new AtivacaoClienteService(notificador);
     }
 }
+*/

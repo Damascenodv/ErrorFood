@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.error404.errorfoodapi.di.modelo.Cliente;
 import com.error404.errorfoodapi.di.service.AtivacaoClienteService;
+import com.error404.errorfoodapi.di.service.listener.NotificacaoServce;
 
 
 @Controller
@@ -28,6 +29,15 @@ public class MeuPrimeiroController {
 	 
 		ativacaoClienteService.ativar(joao);
 		return "Hello1234!";
+	}
+
+	@GetMapping("/ativacaoTeste")
+	@ResponseBody
+	public String ativarTest() {
+		Cliente joao = new Cliente("joão", "email@gmail.com", "999999");
+	 
+		ativacaoClienteService.ativar(joao);
+		return NotificacaoServce.getMessage();
 	}
 	
 }
