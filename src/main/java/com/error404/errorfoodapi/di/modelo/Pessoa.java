@@ -1,6 +1,5 @@
 package com.error404.errorfoodapi.di.modelo;
 
-import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,7 +22,7 @@ public class Pessoa {
 	private String email;
 	@Column(name = "pes_telefone")
 	private String telefone;
-	@Column(name = "pes_usuario_ativo")
+	@Column(name = "pes_usuario_ativo", columnDefinition = "BOOLEAN DEFAULT FALSE", nullable = false)
 	private boolean usuaioAtivo = false;
 
 	public Pessoa(){
