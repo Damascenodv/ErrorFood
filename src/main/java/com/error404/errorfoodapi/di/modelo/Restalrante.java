@@ -2,8 +2,11 @@ package com.error404.errorfoodapi.di.modelo;
 
 import java.math.BigDecimal;
 
+import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -12,6 +15,7 @@ import javax.persistence.Table;
 public class Restalrante {
     @Id
     @Column(name = "res_codigo")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long codigo;
 
     @Column(name = "res_nome")

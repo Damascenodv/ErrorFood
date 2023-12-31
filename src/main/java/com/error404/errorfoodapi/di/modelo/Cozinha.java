@@ -2,6 +2,8 @@ package com.error404.errorfoodapi.di.modelo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -11,6 +13,7 @@ import javax.persistence.Table;
 public class Cozinha {
     @Id
     @Column(name = "coz_codigo")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long codigo;
 
     @Column(name = "coz_nome")
