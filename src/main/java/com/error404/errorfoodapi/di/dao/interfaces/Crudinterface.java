@@ -2,6 +2,8 @@ package com.error404.errorfoodapi.di.dao.interfaces;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 public interface Crudinterface<T> {
     public List<T> getAll();
 
@@ -10,6 +12,6 @@ public interface Crudinterface<T> {
     public T insert(T obj);
 
     public T update (long codigo, T obj);
-
+    
     public void delete (T obj);
 }
