@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.error404.errorfoodapi.di.modelo.Cliente;
+import com.error404.errorfoodapi.di.modelo.Pessoa;
 import com.error404.errorfoodapi.di.modelo.enums.NivelUrgencia;
 import com.error404.errorfoodapi.di.notificacao.Notificador;
 import com.error404.errorfoodapi.di.notificacao.TipoNotificador;
@@ -21,7 +21,7 @@ public class AtivadorUsuarioController {
 	@Autowired(required = false)
 	private Notificador notificador;
 
-	private Cliente cliente;
+	private Pessoa cliente;
 	
 
 	public AtivadorUsuarioController(AtivacaoClienteService ativacaoClienteService) {
@@ -34,7 +34,7 @@ public class AtivadorUsuarioController {
 	@GetMapping("/hello")
 	@ResponseBody
 	public String hello() {
-		Cliente joao = new Cliente("joão", "email@gmail.com", "999999");
+		Pessoa joao = new Pessoa( "joão", "email@gmail.com", "999999");
 	 
 		ativacaoClienteService.ativar(joao,notificador);
 		return "Hello1234!";
@@ -43,7 +43,7 @@ public class AtivadorUsuarioController {
 	@GetMapping("/ativacaoTeste")
 	@ResponseBody
 	public String ativarTest() {
-		cliente = new Cliente("joão", "email@gmail.com", "999999");
+		cliente = new Pessoa( "joão", "email@gmail.com", "999999");
 		ativacaoClienteService.ativar(cliente,notificador);
 		return NotificacaoServce.getMessage();
 	}

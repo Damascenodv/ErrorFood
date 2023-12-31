@@ -1,13 +1,20 @@
 package com.error404.errorfoodapi.di.modelo;
 
-public class Cliente {
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "tb_pes_pessoa")
+public class Pessoa {
+
+	private int codigo;
+	private String cpfCnpj; 
 	private String nome;
 	private String email;
 	private String telefone;
 	private boolean ativo = false;
 
-	public Cliente(String nome, String email, String telefone) {
+	public Pessoa(String nome, String email, String telefone) {
 		this.nome = nome;
 		this.email = email;
 		this.telefone = telefone;

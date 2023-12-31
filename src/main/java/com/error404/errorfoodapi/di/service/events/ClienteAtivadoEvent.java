@@ -2,13 +2,13 @@ package com.error404.errorfoodapi.di.service.events;
 
 import org.springframework.stereotype.Component;
 
-import com.error404.errorfoodapi.di.modelo.Cliente;
+import com.error404.errorfoodapi.di.modelo.Pessoa;
 import com.error404.errorfoodapi.di.notificacao.Notificador;
 
 public class ClienteAtivadoEvent {
-    private Cliente cliente;
+    private Pessoa cliente;
 
-    public ClienteAtivadoEvent(Cliente cliente,Notificador notificador) {
+    public ClienteAtivadoEvent(Pessoa cliente,Notificador notificador) {
         this.cliente = cliente;
         if (notificador != null) {
 			notificador.notificar(cliente, "Seu cadastro no sistema está ativo!");
@@ -17,7 +17,7 @@ public class ClienteAtivadoEvent {
 		}
     }
 
-    public Cliente getCliente() {
+    public Pessoa getPessoa( ) {
         return cliente;
     }
     
