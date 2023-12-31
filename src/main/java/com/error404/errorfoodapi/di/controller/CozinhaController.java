@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -53,9 +54,18 @@ public class CozinhaController {
     @PutMapping("cozinha/{id}")
     public ResponseEntity updateCozinha(@PathVariable long id, @RequestBody Cozinha entity) {
         cozinhas.update(id, entity);
-        
         return ResponseEntity.status(HttpStatus.CREATED).body("cozinha alterada com sucesso");
     }
+    
+    @DeleteMapping("cozinha/{id}")
+    public ResponseEntity deleteCozinha(@PathVariable long id){
+        Cozinha cozinha =  cozinhas.getAllbyPK(id);
+        cozinhas.delete(cozinha);
+        return ResponseEntity.status(HttpStatus.CREATED).body("cozinha deleto com sucesso");
+
+    }
+
+    
     
     
 }

@@ -10,4 +10,6 @@ public interface Crudinterface<T> {
     public T insert(T obj);
 
     public T update (long codigo, T obj);
+
+    public void delete (T obj);
 }

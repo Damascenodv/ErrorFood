@@ -34,5 +34,11 @@ public class RestauranteJpqlDao extends BaseJpqlDao implements  Crudinterface<Re
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'update'");
     }
-    
+
+    @Override
+    public void delete(Restaurante obj) {
+          manager.remove(obj);
+    }
+
+
 }

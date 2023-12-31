@@ -32,9 +32,16 @@ public class CozinhaJpqlDao extends BaseJpqlDao implements Crudinterface<Cozinha
     }
 
     @Override
-    @Transactional  public Cozinha update(long id, Cozinha cozinha) {
+    @Transactional  
+    public Cozinha update(long id, Cozinha cozinha) {
         cozinha.setCodigo(id);
         return manager.merge(cozinha);
+    }
+
+    @Override
+    @Transactional
+    public void delete(Cozinha obj) {
+        manager.remove(obj);
     }
 
 
