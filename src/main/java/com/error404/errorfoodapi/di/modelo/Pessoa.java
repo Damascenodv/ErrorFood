@@ -11,7 +11,7 @@ public class Pessoa {
     @Id
 	@Column(name = "pes_codigo")
 	private long codigo;
-	@Column(name = "pes_cpf_cnpj")
+	@Column(name = "pes_cpf_cnpj", length =12)
 	private String cpfCnpj; 
 	@Column(name = "pes_nome")
 	private String nome;
