@@ -9,12 +9,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.error404.errorfoodapi.di.dao.interfaces.Crudinterface;
 import com.error404.errorfoodapi.di.dao.jpql.CozinhaJpqlDao;
 import com.error404.errorfoodapi.di.modelo.Cozinha;
+
 
 
 
@@ -32,7 +34,7 @@ public class CozinhaController {
         return cozinhas.getAll() ;
     }
     @PostMapping("/cozinha")
-    public ResponseEntity postMethodName(@RequestBody Cozinha cozinha) {
+    public ResponseEntity insertCozinha(@RequestBody Cozinha cozinha) {
         cozinhas.insert(cozinha);
         return ResponseEntity.status(HttpStatus.CREATED).body("cozinha cadastrada com sucesso");
     }
@@ -46,6 +48,13 @@ public class CozinhaController {
             return ResponseEntity.ok(cozinha);
         }
         return ResponseEntity.notFound().build();
+    }
+
+    @PutMapping("cozinha/{id}")
+    public ResponseEntity updateCozinha(@PathVariable long id, @RequestBody Cozinha entity) {
+        cozinhas.update(id, entity);
+        
+        return ResponseEntity.status(HttpStatus.CREATED).body("cozinha alterada com sucesso");
     }
     
     

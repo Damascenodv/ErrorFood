@@ -2,8 +2,6 @@ package com.error404.errorfoodapi.di.dao.jpql;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 
@@ -13,10 +11,8 @@ import com.error404.errorfoodapi.di.dao.interfaces.Crudinterface;
 import com.error404.errorfoodapi.di.modelo.Cozinha;
 
 @Component
-public class CozinhaJpqlDao implements Crudinterface<Cozinha>{
+public class CozinhaJpqlDao extends BaseJpqlDao implements Crudinterface<Cozinha>{
 
-    @PersistenceContext
-    private EntityManager manager;
 
     @Override
     public List<Cozinha> getAll() {
@@ -34,6 +30,14 @@ public class CozinhaJpqlDao implements Crudinterface<Cozinha>{
     public Cozinha insert(Cozinha cozinha) {
         return manager.merge(cozinha);
     }
+
+    @Override
+    @Transactional  public Cozinha update(long id, Cozinha cozinha) {
+        cozinha.setCodigo(id);
+        return manager.merge(cozinha);
+    }
+
+
     
 
 

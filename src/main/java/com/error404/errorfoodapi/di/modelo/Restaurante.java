@@ -2,7 +2,6 @@ package com.error404.errorfoodapi.di.modelo;
 
 import java.math.BigDecimal;
 
-import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,8 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_res_restalrante")
-public class Restalrante {
+@Table(name = "tb_res_restaurante")
+public class Restaurante {
     @Id
     @Column(name = "res_codigo")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -64,7 +63,7 @@ public class Restalrante {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Restalrante other = (Restalrante) obj;
+        Restaurante other = (Restaurante) obj;
         if (codigo != other.codigo)
             return false;
         return true;
