@@ -5,7 +5,7 @@ import java.util.List;
 public interface Crudinterface<T> {
     public List<T> getAll();
 
-    public List<T> getAllbyPK(T obj);
+    public T getAllbyPK(long id);
 
     public T insert(T obj);
 }

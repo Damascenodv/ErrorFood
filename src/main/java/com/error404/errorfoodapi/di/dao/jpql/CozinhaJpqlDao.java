@@ -25,9 +25,8 @@ public class CozinhaJpqlDao implements Crudinterface<Cozinha>{
     }
 
     @Override
-    public List<Cozinha> getAllbyPK(Cozinha cozinha) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAllbyPK'");
+    public Cozinha getAllbyPK(long codigo) {
+        return manager.find(Cozinha.class, codigo);
     }
 
     @Override
