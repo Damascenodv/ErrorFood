@@ -34,7 +34,7 @@ public class AtivadorUsuarioController {
 	@GetMapping("/hello")
 	@ResponseBody
 	public String hello() {
-		Pessoa joao = new Pessoa( "joão", "email@gmail.com", "999999");
+		Pessoa joao = new Pessoa("0000" ,"joão", "email@gmail.com", "999999");
 	 
 		ativacaoClienteService.ativar(joao,notificador);
 		return "Hello1234!";
@@ -43,7 +43,7 @@ public class AtivadorUsuarioController {
 	@GetMapping("/ativacaoTeste")
 	@ResponseBody
 	public String ativarTest() {
-		cliente = new Pessoa( "joão", "email@gmail.com", "999999");
+		cliente = new Pessoa( "0000","joão", "email@gmail.com", "999999");
 		ativacaoClienteService.ativar(cliente,notificador);
 		return NotificacaoServce.getMessage();
 	}

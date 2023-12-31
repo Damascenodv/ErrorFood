@@ -8,7 +8,7 @@ import com.error404.errorfoodapi.di.modelo.Pessoa;
 import com.error404.errorfoodapi.di.modelo.enums.NivelUrgencia;
 import com.error404.errorfoodapi.di.notificacao.Notificador;
 import com.error404.errorfoodapi.di.notificacao.TipoNotificador;
-import com.error404.errorfoodapi.di.service.events.PessoaAtivadoEvent;
+import com.error404.errorfoodapi.di.service.events.ClienteAtivadoEvent;
 
 
 @Component

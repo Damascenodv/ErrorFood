@@ -3,7 +3,7 @@ package com.error404.errorfoodapi.di.service.listener;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
-import com.error404.errorfoodapi.di.service.events.PessoaAtivadoEvent;
+import com.error404.errorfoodapi.di.service.events.ClienteAtivadoEvent;
 
 @Component
 public class NotificacaoServce {
