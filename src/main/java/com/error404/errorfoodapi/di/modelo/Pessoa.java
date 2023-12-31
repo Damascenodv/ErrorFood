@@ -54,6 +54,35 @@ public class Pessoa {
 	public void ativar() {
 		this.usuaioAtivo = true;
 	}
+
+	
+	public long getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(long codigo) {
+		this.codigo = codigo;
+	}
+	public String getCpfCnpj() {
+		return cpfCnpj;
+	}
+	public void setCpfCnpj(String cpfCnpj) {
+		this.cpfCnpj = cpfCnpj;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+	public boolean isUsuaioAtivo() {
+		return usuaioAtivo;
+	}
+	public void setUsuaioAtivo(boolean usuaioAtivo) {
+		this.usuaioAtivo = usuaioAtivo;
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
