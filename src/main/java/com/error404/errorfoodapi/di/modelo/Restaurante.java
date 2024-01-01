@@ -29,7 +29,7 @@ public class Restaurante {
     private long codigo;
 
     @EqualsAndHashCode.Include
-    @Column(name = "res_nome")
+    @Column(name = "res_nome", nullable =  false)
     private String nome;
 
     @Column(name = "res_taxa_frete")
@@ -37,7 +37,7 @@ public class Restaurante {
 
        
     @ManyToOne
-    @JoinColumn(name = "coz_codigo")
+    @JoinColumn(name = "coz_codigo", nullable = false)
     private Cozinha cozinha;
 
     
