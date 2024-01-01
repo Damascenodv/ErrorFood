@@ -20,9 +20,6 @@ public class AtivacaoClienteService {
 	public void ativar(Pessoa cliente,Notificador notificador) {
 		cliente.ativar();
 		eventPublisher.publishEvent(new ClienteAtivadoEvent(cliente,notificador));
-
-		
-
 	}
 	
 }

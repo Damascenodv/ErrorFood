@@ -2,13 +2,11 @@ package com.error404.errorfoodapi.di.dao.jpql;
 
 import java.util.List;
 
-import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Component;
 
 import com.error404.errorfoodapi.di.dao.interfaces.Crudinterface;
-import com.error404.errorfoodapi.di.modelo.Cozinha;
 import com.error404.errorfoodapi.di.modelo.Pessoa;
 
 
