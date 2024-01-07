@@ -13,3 +13,8 @@ INSERT into tb_pes_pessoa (pes_nome,pes_cpf_cnpj,pes_email,pes_telefone) VALUES(
 
 
 insert into tb_res_restaurante (res_nome,res_taxa_frete) VALUES ('gril', 7.56);
+
+
+INSERT into tb_fpg_forma_pagamento(fpg_descricao) VALUES('debito');
+
+INSERT into tb_fpg_forma_pagamento(fpg_descricao) VALUES('credito');

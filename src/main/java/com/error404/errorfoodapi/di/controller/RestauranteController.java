@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.error404.errorfoodapi.di.dao.interfaces.Crudinterface;
+import com.error404.errorfoodapi.di.dao.interfaces.Repositorio;
 import com.error404.errorfoodapi.di.dao.jpql.RestauranteJpqlDao;
 import com.error404.errorfoodapi.di.modelo.Restaurante;
 
@@ -23,9 +23,9 @@ import com.error404.errorfoodapi.di.modelo.Restaurante;
 
 @Controller
 public class RestauranteController {
-    Crudinterface<Restaurante> restaurantes = new RestauranteJpqlDao();
+    Repositorio<Restaurante> restaurantes = new RestauranteJpqlDao();
     @Autowired
-    public RestauranteController(Crudinterface<Restaurante> restaurantes) {
+    public RestauranteController(Repositorio<Restaurante> restaurantes) {
         this.restaurantes = restaurantes;
     }
 

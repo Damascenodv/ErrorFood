@@ -6,12 +6,12 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Component;
 
-import com.error404.errorfoodapi.di.dao.interfaces.Crudinterface;
+import com.error404.errorfoodapi.di.dao.interfaces.Repositorio;
 import com.error404.errorfoodapi.di.modelo.Pessoa;
 
 
 @Component
-public class PessoaJpqlDao extends BaseJpqlDao implements Crudinterface<Pessoa> {
+public class PessoaJpqlDao extends BaseJpqlDao implements Repositorio<Pessoa> {
 
     @Override
     public List<Pessoa> getAll() {

@@ -14,15 +14,15 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.error404.errorfoodapi.di.dao.interfaces.Crudinterface;
+import com.error404.errorfoodapi.di.dao.interfaces.Repositorio;
 import com.error404.errorfoodapi.di.dao.jpql.PessoaJpqlDao;
 import com.error404.errorfoodapi.di.modelo.Pessoa;
 
 @Controller
 public class PessoaController {
-    Crudinterface<Pessoa> pessoas = new PessoaJpqlDao();
+    Repositorio<Pessoa> pessoas = new PessoaJpqlDao();
     @Autowired
-    public PessoaController(Crudinterface<Pessoa> pessoas) {
+    public PessoaController(Repositorio<Pessoa> pessoas) {
         this.pessoas = pessoas;
     }
 

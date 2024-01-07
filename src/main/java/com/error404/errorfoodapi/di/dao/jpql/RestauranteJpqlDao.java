@@ -7,11 +7,11 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Component;
 
-import com.error404.errorfoodapi.di.dao.interfaces.Crudinterface;
+import com.error404.errorfoodapi.di.dao.interfaces.Repositorio;
 import com.error404.errorfoodapi.di.modelo.Restaurante;
 
 @Component
-public class RestauranteJpqlDao extends BaseJpqlDao implements  Crudinterface<Restaurante> {
+public class RestauranteJpqlDao extends BaseJpqlDao implements  Repositorio<Restaurante> {
     
 
     @Override
