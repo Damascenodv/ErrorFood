@@ -16,7 +16,6 @@ public class PessoaJpqlDao extends BaseJpqlDao implements Repositorio<Pessoa> {
     @Override
     public List<Pessoa> getAll() {
         return manager.createQuery("from Pessoa", Pessoa.class).getResultList();
-   
     }
 
     @Override
